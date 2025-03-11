@@ -1,23 +1,19 @@
 {% extends "base.html" %}
 
-
 {% block content %}
 
-
-    <h1>Добро пожаловать на мой сайт!</h1>
-
     {% for post in posts %}
-        
+        <section>
         <h2>{{ post.title }}</h2>
         <small>{{ post.date }}</small>
         <p>{{ post.excerpt }}</p>
 
         <div>
             {% for tag in post.tags.all%}
-            <small><b>#{{ tag }}</b></small>
+            <code>#{{ tag }}</code>
             {% endfor %}
         </div>
-
+    </section>
     {% endfor %}
 
 

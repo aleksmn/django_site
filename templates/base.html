@@ -5,10 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <title>Django site</title>
+
+    <style>
+        :root {
+            font-size: 0.9rem;
+            --bg: #1c262b;
+            --accent-bg: #2a3a43;
+        }
+        .header {
+            padding: 1rem;
+        }
+    </style>
 </head>
 <body>
-    {% block content %}
-    
-    {% endblock %}
+    <header class="header">
+
+        <h1>Django Simple Project</h1>
+
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/">Блог</a>
+            <a href="/">Контакты</a>
+            <a href="/">О проекте</a>
+        </nav>
+
+    </header>
+
+    <main>
+        {% block content %}    
+        {% endblock %}
+    </main>
+
+    <footer>
+
+        <p>Django Site Test Project, 2025</p>
+
+    </footer>
 </body>
 </html>
