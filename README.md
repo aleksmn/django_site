@@ -4,7 +4,8 @@
 
 python -m venv .venv 
 
-.\.venv\bin\activate
+
+.\.venv\Scripts\activate
 
 pip install django
 
