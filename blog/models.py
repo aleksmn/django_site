@@ -13,7 +13,7 @@ class Post(models.Model):
     date = models.DateField(auto_now=True)
     slug = models.SlugField(unique=True)
     content = models.TextField()
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, null=True)
 
     def __str__(self):
         return self.title
