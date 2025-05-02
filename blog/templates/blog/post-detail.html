@@ -3,9 +3,13 @@
 {% block title %}Пост{% endblock %}
 
 {% block content %}
-    <h1>Пост</h1>
+    <section>
+        <h2>{{post.title}}</h2>
+        <p><time>{{ post.date }}</time></p>
+    </section>
 
-
-
+    <div>
+        {{ post.content|linebreaks }}
+    </div>
 
 {% endblock %}
