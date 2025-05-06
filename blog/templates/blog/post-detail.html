@@ -6,6 +6,11 @@
     <section>
         <h2>{{post.title}}</h2>
         <p><time>{{ post.date }}</time></p>
+        <div>
+        {% for tag in post.tags.all%}
+        <code>#{{ tag }}</code>
+        {% endfor %}
+        </div>
     </section>
 
     <div>

@@ -25,3 +25,9 @@ def post_detail(request, slug):
     return render(request, "blog/post-detail.html", {
         "post": post
     })
+
+def about(request):
+    return render(request, "blog/about.html")
+
+def contacts(request):
+    return render(request, "blog/contacts.html")
