@@ -1,25 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <title>{% block title %}Django site{% endblock %}</title>
-
-    <style>
-        :root {
-            font-size: 0.9rem;
-            --bg: #1c262b;
-            --accent-bg: #2a3a43;
-        }
-        .header {
-            padding: 1rem;
-        }
-        a {
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href='{% static "app.css" %}'>
+    <link rel="icon" href="{% static 'favicon.png' %}" type="image/png">
 </head>
+
 <body>
     <header class="header">
 
@@ -35,7 +27,7 @@
     </header>
 
     <main>
-        {% block content %}    
+        {% block content %}
         {% endblock %}
     </main>
 
@@ -45,4 +37,5 @@
 
     </footer>
 </body>
+
 </html>
