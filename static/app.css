@@ -1,0 +1,13 @@
+:root {
+    font-size: 0.9rem;
+    --bg: #1c262b;
+    --accent-bg: #2a3a43;
+}
+
+.header {
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
