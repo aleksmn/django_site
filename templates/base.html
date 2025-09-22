@@ -18,11 +18,28 @@
         <h1>Django Simple Project</h1>
 
         <nav>
+
+
             <a href="/">Главная</a>
             <a href="/posts">Блог</a>
             <a href="/contacts">Контакты</a>
             <a href="/about">О проекте</a>
+
         </nav>
+        <p>
+        <form id="logout-form" method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            {% if user.is_authenticated %}
+            Привет, <strong>{{ user.get_username }}</strong>!
+
+            <button type="submit">Выйти</button>
+
+            {% else %}
+            Привет, <strong>Гость</strong>!
+            <a href="{% url 'login' %}?next={{ request.path }}"><button type="button">Войти</button></a>
+            {% endif %}
+        </form>
+        </p>
 
     </header>
 

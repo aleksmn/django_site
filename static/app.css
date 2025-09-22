@@ -8,6 +8,13 @@
     padding: 1rem;
 }
 
+.header button {
+    padding: 0.3rem;
+    background-color: inherit;
+    color: var(--accent);;
+    margin-left: 0.5rem;
+}
+
 a {
     text-decoration: none;
 }
