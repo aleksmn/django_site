@@ -1,8 +1,23 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.auth import login
 
+from .forms import RegisterForm
 from .models import Post
 
-# Create your views here.
+
+def register_view(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)  # автоматически логин
+            messages.success(request, 'Регистрация прошла успешно.')
+            return redirect('starting-page')
+    else:
+        form = RegisterForm()
+    return render(request, 'registration/register.html', {'form': form})
+
 
 def starting_page(request):
 

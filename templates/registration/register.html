@@ -1,0 +1,25 @@
+<form method="post">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  <div>
+    <label>Имя пользователя</label>
+    {{ form.username.errors }}
+    {{ form.username }}
+  </div>
+  <div>
+    <label>Email</label>
+    {{ form.email.errors }}
+    {{ form.email }}
+  </div>
+  <div>
+    <label>Пароль</label>
+    {{ form.password1.errors }}
+    {{ form.password1 }}
+  </div>
+  <div>
+    <label>Подтвердите пароль</label>
+    {{ form.password2.errors }}
+    {{ form.password2 }}
+  </div>
+  <button type="submit">Зарегистрироваться</button>
+</form>

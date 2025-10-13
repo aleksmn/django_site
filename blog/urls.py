@@ -7,5 +7,6 @@ urlpatterns = [
     path('posts/', views.posts, name="posts-page"),
     path('posts/<slug:slug>', views.post_detail, name="post-detail-page"), #/posts/my-first-post
     path('about/', views.about, name="about-page"),
-    path('contacts/', views.contacts, name="contacts-page")
+    path('contacts/', views.contacts, name="contacts-page"),
+    path('register/', views.register_view, name='register')
 ]
