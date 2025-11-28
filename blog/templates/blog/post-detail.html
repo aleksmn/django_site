@@ -3,18 +3,21 @@
 {% block title %}Пост{% endblock %}
 
 {% block content %}
-    <section>
-        <h2>{{post.title}}</h2>
-        <p><time>{{ post.date }}</time></p>
-        <div>
+<section>
+    <h2>{{post.title}}</h2>
+    <p>
+        <img src="/media/{{ post.image }}" alt="">
+    </p>
+    <p><time>{{ post.date }}</time></p>
+    <div>
         {% for tag in post.tags.all%}
         <code>#{{ tag }}</code>
         {% endfor %}
-        </div>
-    </section>
-
-    <div>
-        {{ post.content|linebreaks }}
     </div>
+</section>
+
+<div>
+    {{ post.content|linebreaks }}
+</div>
 
 {% endblock %}
