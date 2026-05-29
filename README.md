@@ -2,26 +2,32 @@
 
 ## Usefull commands
 
+Создаем виртуальное окружение
 python -m venv .venv 
 
-.\.venv\bin\activate
+Активируем виртуальное окружение
+.venv\Scripts\activate
 
+Устанавливаем Django
 pip install django
 
+Получаем список установленных модулей в данной среде
 pip freeze
 
-pip freeze > requirements.txt
-
-pip install -r requirements.txt
-
+Создаем новый проект Django
 django-admin startproject djangosite .
 
-python .\manage.py startapp blog
+Создаем новое приложение Django
+python manage.py startapp blog
 
-python .\manage.py runserver
+Запускаем сервер разработки
+python manage.py runserver
 
+Создаем миграции
 python manage.py makemigrations
 
+Применяем миграции
 python manage.py migrate
 
+Создаем суперпользователя
 python manage.py createsuperuser
