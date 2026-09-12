@@ -14,6 +14,8 @@ class Post(models.Model):
     slug = models.SlugField(unique=True)
     content = models.TextField()
     tags = models.ManyToManyField(Tag)
+    image = models.ImageField(upload_to='blog/images/%Y/%m/%d/', blank=True, null=True)
+
 
     def __str__(self):
         return self.title

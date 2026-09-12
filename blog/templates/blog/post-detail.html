@@ -4,6 +4,7 @@
 
 {% block content %}
     <section>
+        {% if post.image %}<img src="{{ post.image.url }}">{% endif %}
         <h2>{{post.title}}</h2>
         <p><time>{{ post.date }}</time></p>
         <div>
